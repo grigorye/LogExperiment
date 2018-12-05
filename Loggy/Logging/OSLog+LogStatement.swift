@@ -382,7 +382,9 @@ extension OSLog {
     ///   assertion is checked.
     @_transparent
     public func assert(_ condition: @autoclosure() -> Bool, _ statement: @autoclosure() -> LogStatement, file: StaticString = #file, line: UInt = #line, containingBinary dso: UnsafeRawPointer = #dsohandle) {
+		#if !COCOAPODS || DEBUG
         guard _isDebugAssertConfiguration(), !condition() else { return }
+		#endif
         assertionFailure(statement(), file: file, line: line, containingBinary: dso)
     }
 
