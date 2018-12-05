@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "11.0"
   s.osx.deployment_target = "10.12"
   
-  s.source        = { :git => "https://github.com/zwaldowski/LogExperiment.git", :tag => "#{s.version}" }
+  s.source        = { :git => "https://github.com/grigorye/LogExperiment.git", :tag => "#{s.version}" }
   s.source_files  = "Loggy/**/*.{swift,m,c,h}"
   
   s.swift_version = "4.0"
